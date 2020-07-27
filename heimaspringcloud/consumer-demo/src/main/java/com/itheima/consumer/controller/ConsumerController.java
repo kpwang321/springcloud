@@ -27,9 +27,12 @@ public class ConsumerController {
     public User queryById(@PathVariable Long id){
         //String url="http://localhost:9091/user/8";
         //获取eureka中注册的user-service实例
-        List<ServiceInstance> instances = discoveryClient.getInstances("user-service");
+        /*List<ServiceInstance> instances = discoveryClient.getInstances("user-service");
         ServiceInstance serviceInstance = instances.get(0);
-        String url="http://"+serviceInstance.getHost()+":"+serviceInstance.getPort()+"/user/"+id;
+        String url="http://"+serviceInstance.getHost()+":"+serviceInstance.getPort()+"/user/"+id;*/
+
+
+        String url="http://user-service/user/"+id;
         return restTemplate.getForObject(url, User.class);
     }
 }
