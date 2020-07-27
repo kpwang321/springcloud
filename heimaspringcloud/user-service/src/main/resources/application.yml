@@ -1,0 +1,25 @@
+server:
+  port: 9091
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.5.102:33306/springcloud?characterEncoding=utf8
+    username: root
+    password: root
+  application:
+    name: user-service
+mybatis:
+  type-aliases-package: com.itheima.user.pojo
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10086/eureka
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+    #续约间隔默认30秒
+    lease-renewal-interval-in-seconds: 5
+    #服务失效时间，默认90秒
+    lease-expiration-duration-in-seconds: 5
+
+
