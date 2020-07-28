@@ -9,7 +9,20 @@ spring:
         git:
           uri: https://github.com/kpwang321/heima-config.git
           #uri: https://gitee.com/wang_kaipeng/heima-config.git
+  #配置rabbit信息：如果都和默认值一致则不需要配置
+  rabbitmq:
+    host: 192.168.5.103
+    port: 5672
+    username: guest
+    password: guest
+
 eureka:
   client:
     service-url:
       defaultZone: http://127.0.0.1:10086/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        #暴露触发消息总线的地址
+        include: bus-refresh
