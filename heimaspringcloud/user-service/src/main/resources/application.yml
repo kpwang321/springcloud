@@ -3,7 +3,7 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.5.102:33306/springcloud?characterEncoding=utf8
+    url: jdbc:mysql://192.168.154.128:33306/springcloud?characterEncoding=utf8
     username: root
     password: root
   application:
@@ -13,7 +13,7 @@ mybatis:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:10086/eureka
+      defaultZone: http://192.168.5.101:10086/eureka
   instance:
     prefer-ip-address: true
     ip-address: 127.0.0.1
