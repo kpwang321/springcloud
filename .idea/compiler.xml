@@ -6,15 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="config-server" />
         <module name="consumer-demo" />
         <module name="eureka-server" />
+        <module name="heima-gateway" />
         <module name="http-demo" />
         <module name="user-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="config-server" target="1.8" />
       <module name="consumer-demo" target="1.8" />
       <module name="eureka-server" target="1.8" />
+      <module name="heima-gateway" target="1.8" />
       <module name="heimaspringcloud" target="1.8" />
       <module name="http-demo" target="1.8" />
       <module name="user-service" target="1.8" />
